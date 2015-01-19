@@ -1,0 +1,89 @@
+@-moz-viewport { width: device-width; scale: 1; }
+@-ms-viewport { width: device-width; scale: 1; }
+@-o-viewport { width: device-width; scale: 1; }
+@-webkit-viewport { width: device-width; scale: 1; }
+@viewport { width: device-width; scale: 1; }
+
+html {
+    box-sizing: border-box;
+    xbackground-image: url("img/stars.svg");
+    xbackground-color: black;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body{
+xbackground-image: url("../img/star.svg");
+xbackground-color: black;
+}
+
+.asteroid {
+	position: absolute;
+	top: 100px;
+	left: 100px;
+	width: 100px;
+	height: 100px;
+	animation: box-rotate 7s ease-in-out infinite alternate;
+
+}
+
+@keyframes box-rotate{
+
+0% {
+	transform: rotate(0deg);
+}
+
+100% {
+	transform: rotate(360deg);
+}
+
+}
+
+.ship {
+	position: absolute;
+	top: 200px;
+	left:500px;
+	width: 100px;
+	height: 1	00px;
+	animation: box-rotate 7s ease-in-out infinite alternate;
+
+
+
+@keyframes box-rotate{
+
+0% {
+	transform: rotate(0deg);
+}
+
+100% {
+	transform: rotate(360deg);
+}
+
+}
+
+
+.star {
+	xbackground-image: url("../img/stars.svg");
+	background-color: black;
+	position: absolute;
+	top: 200px;
+	left:500px;
+	width: 100px;
+	height: 1	00px;
+	animation: box-rotate 7s ease-in-out infinite alternate;
+
+
+
+@keyframes box-rotate{
+
+0% {
+	transform: rotate(0deg);
+}
+
+100% {
+	transform: rotate(360deg);
+}
+
+}
