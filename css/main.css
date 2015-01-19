@@ -6,17 +6,11 @@
 
 html {
     box-sizing: border-box;
-    xbackground-image: url("img/stars.svg");
-    xbackground-color: black;
+    background-color: black;
 }
 
 *, *::before, *::after {
     box-sizing: inherit;
-}
-
-body{
-xbackground-image: url("../img/star.svg");
-xbackground-color: black;
 }
 
 .asteroid {
@@ -26,64 +20,71 @@ xbackground-color: black;
 	width: 100px;
 	height: 100px;
 	animation: box-rotate 7s ease-in-out infinite alternate;
-
 }
 
 @keyframes box-rotate{
 
-0% {
-	transform: rotate(0deg);
-}
+	0% {
+		transform: rotate(0deg);
+	}
 
-100% {
-	transform: rotate(360deg);
-}
+	100% {
+		transform: rotate(360deg);
+	}
 
 }
 
 .ship {
 	position: absolute;
-	top: 200px;
-	left:500px;
+	top: 100px;
+	left:50%;
 	width: 100px;
-	height: 1	00px;
-	animation: box-rotate 7s ease-in-out infinite alternate;
-
-
-
-@keyframes box-rotate{
-
-0% {
-	transform: rotate(0deg);
-}
-
-100% {
-	transform: rotate(360deg);
-}
-
+	height: 100px;
+	animation: ship-fly 7s ease-in-out infinite alternate;
 }
 
 
-.star {
-	xbackground-image: url("../img/stars.svg");
-	background-color: black;
-	position: absolute;
-	top: 200px;
-	left:500px;
-	width: 100px;
-	height: 1	00px;
-	animation: box-rotate 7s ease-in-out infinite alternate;
+@keyframes ship-fly{
 
+	0% {
+		transform: translateX(0);
+	}
 
+	25% {
+		transform: translateX(-200px);
+	}
 
-@keyframes box-rotate{
+	50% {
+		transform: translateY(200px);
+	}
 
-0% {
-	transform: rotate(0deg);
+	75% {
+		transform: translateX(320px);
+	}
+
+	100% {
+		transform: translateY(450px);
+	}
+
 }
 
-100% {
-	transform: rotate(360deg);
+
+.stars {
+	background-image: url("../img/stars.svg");
+	width: 100%;
+	height: 100vh;
+	animation: star-scale 7s ease-in-out infinite alternate;
 }
 
+@keyframes star-scale {
+
+	0% {
+		transform: scale(1,1);
+	}
+
+	75% {
+		transform: scale(2,2);
+	}
+
 }
+
