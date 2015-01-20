@@ -19,19 +19,18 @@ html {
 	left: 100px;
 	width: 100px;
 	height: 100px;
+	-webkit-animation: box-rotate 7s ease-in-out infinite alternate;
 	animation: box-rotate 7s ease-in-out infinite alternate;
 }
 
+@-webkit-keyframes box-rotate{
+	0% {transform: rotate(0deg);}
+	100% {transform: rotate(360deg);}
+}
+
 @keyframes box-rotate{
-
-	0% {
-		transform: rotate(0deg);
-	}
-
-	100% {
-		transform: rotate(360deg);
-	}
-
+	0% {transform: rotate(0deg);}
+	100% {transform: rotate(360deg);}
 }
 
 .ship {
@@ -40,51 +39,40 @@ html {
 	left:50%;
 	width: 100px;
 	height: 100px;
+	-webkit-animation: ship-fly 7s ease-in-out infinite alternate;
 	animation: ship-fly 7s ease-in-out infinite alternate;
 }
 
-
-@keyframes ship-fly{
-
-	0% {
-		transform: translateX(0);
-	}
-
-	25% {
-		transform: translateX(-200px);
-	}
-
-	50% {
-		transform: translateY(200px);
-	}
-
-	75% {
-		transform: translateX(320px);
-	}
-
-	100% {
-		transform: translateY(450px);
-	}
-
+@-webkit-keyframes ship-fly{
+	0% {transform: translateX(0);}
+	25% {transform: translateX(-200px);}
+	50% {transform: translateY(200px);}
+	75% {transform: translateX(320px);}
+	100% {transform: translateY(450px);}
 }
 
+@keyframes ship-fly{
+	0% {transform: translateX(0);}
+	25% {transform: translateX(-200px);}
+	50% {transform: translateY(200px);}
+	75% {transform: translateX(320px);}
+	100% {transform: translateY(450px);}
+}
 
 .stars {
 	background-image: url("../img/stars.svg");
 	width: 100%;
 	height: 100vh;
+	-webkit-animation: star-scale 7s ease-in-out infinite alternate;
 	animation: star-scale 7s ease-in-out infinite alternate;
 }
 
-@keyframes star-scale {
-
-	0% {
-		transform: scale(1,1);
-	}
-
-	75% {
-		transform: scale(2,2);
-	}
-
+@-webkit-keyframes star-scale {
+	0% {transform: scale(1,1);}
+	75% {transform: scale(2,2);}
 }
 
+@keyframes star-scale {
+	0% {transform: scale(1,1);}
+	75% {transform: scale(2,2);}
+}
